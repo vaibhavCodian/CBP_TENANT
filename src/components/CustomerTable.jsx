@@ -28,7 +28,7 @@ const CustomerTable = () => {
             Authorization: "Bearer " + token,
           },
         };
-        const response = await fetch(`/api/customer/${id}`, requestOptions);
+        const response = await fetch(`http://3.110.44.102/api/customer/${id}`, requestOptions);
         if (!response.ok) {
           setErrorMessage("Failed to delete customer");
         }
@@ -44,7 +44,7 @@ const CustomerTable = () => {
                 Authorization: "Bearer " + token,
             },
         };
-        const response = await fetch("/api/user", requestOptions);
+        const response = await fetch("http://3.110.44.102/api/user", requestOptions);
         
         if(!response.ok){
             setErrorMessage("Something Went Wrong. Couldn't load the User Id");
@@ -64,7 +64,7 @@ const CustomerTable = () => {
                 Authorization: "Bearer " + token,
             },
         };
-        const response = await fetch("/api/customer", requestOptions);
+        const response = await fetch("http://3.110.44.102/api/customer", requestOptions);
         
         if(!response.ok){
             setErrorMessage("Something Went Wrong. Couldn't load the Customers");

@@ -28,7 +28,7 @@ const ProductTable = () => {
             Authorization: "Bearer " + token,
           },
         };
-        const response = await fetch(`/api/purchase/${id}`, requestOptions);
+        const response = await fetch(`http://3.110.44.102/api/purchase/${id}`, requestOptions);
         if (!response.ok) {
           setErrorMessage("Failed to delete purchase");
         }
@@ -44,7 +44,7 @@ const ProductTable = () => {
                 Authorization: "Bearer " + token,
             },
         };
-        const response = await fetch("/api/user", requestOptions);
+        const response = await fetch("http://3.110.44.102/api/user", requestOptions);
         
         if(!response.ok){
             setErrorMessage("Something Went Wrong. Couldn't load the User Id");
@@ -65,7 +65,7 @@ const ProductTable = () => {
                 Authorization: "Bearer " + token,
             },
         };
-        const response = await fetch("/api/purchase", requestOptions);
+        const response = await fetch("http://3.110.44.102/api/purchase", requestOptions);
         
         if(!response.ok){
             setErrorMessage("Something Went Wrong. Couldn't load the Purchases");

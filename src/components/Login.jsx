@@ -18,7 +18,7 @@ const Login = () => {
         };
         console.log("SUBMITING");
 
-        const response = await fetch("/api/token", requestOptions);
+        const response = await fetch("http://3.110.44.102/api/token", requestOptions);
         const data = await response.json();
 
         if (!response.ok) {

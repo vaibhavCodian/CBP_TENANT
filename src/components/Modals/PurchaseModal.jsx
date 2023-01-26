@@ -19,7 +19,7 @@ const PurchaseModal = ({ active, handleModal, token, id, userId,setErrorMessage 
           Authorization: "Bearer " + token,
         },
       };
-      const response = await fetch(`/api/customer/${id}`, requestOptions);
+      const response = await fetch(`http://3.110.44.102/api/customer/${id}`, requestOptions);
 
       if (!response.ok) {
         setErrorMessage("Could not get the customer");
@@ -71,7 +71,7 @@ const PurchaseModal = ({ active, handleModal, token, id, userId,setErrorMessage 
         address: address
       }),
     };
-    const response = await fetch("/api/purchase", requestOptions);
+    const response = await fetch("http://3.110.44.102/api/purchase", requestOptions);
     console.log(response);
     if (!response.ok) {
       setErrorMessage("Something went wrong when creating customer");
