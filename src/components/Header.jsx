@@ -9,14 +9,15 @@ const Header = ({ title }) => {
 
     return (
         <div className="has-text-centered m-6">
-            <h1 className="title">{title}  &#10162;
+            <img src="logo.png" alt="" width="150px" />
+            <p className="title">{title}
             {token && (
                 <button
                     className="button mr-2 is-danger is-light"
                     onClick={handleLogout}
                 >Logout &#8594;</button>
             )}
-            </h1>
+            </p>
             
         </div>
     )
